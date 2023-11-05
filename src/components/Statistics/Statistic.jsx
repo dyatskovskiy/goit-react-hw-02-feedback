@@ -1,9 +1,17 @@
-export const Statistics = ({ good, neutral, bad }) => {
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePersentage,
+}) => {
   return (
-    <div>
+    <>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
-    </div>
+      <p>Total: {total}</p>
+      <p>Positive feedback: {positivePersentage}%</p>
+    </>
   );
 };
