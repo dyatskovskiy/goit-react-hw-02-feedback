@@ -32,13 +32,10 @@ export class App extends Component {
     return (
       <div>
         <Section title={'Please leave feedback'}>
-          {Object.keys(this.state).map(key => (
-            <FeedbackOptions
-              key={key}
-              onLeaveFeedback={() => this.incrementFeedback(key)}
-              options={key}
-            />
-          ))}
+          <FeedbackOptions
+            onLeaveFeedback={this.incrementFeedback}
+            options={this.state}
+          />
         </Section>
 
         {this.countTotalFeedback() > 0 ? (
